@@ -1,18 +1,22 @@
 import { useState } from 'react';
-import { Routes, Route} from 'react-router';
+import { Router, Routes, Route } from 'react-router';
 import './App.css';
 import TaskList from './components/TaskList';
-import TaskDetail from './components/TaskList';
+import TaskDetail from './components/TaskDetail';
 
 function App() {
   return (
     <>
       <div>
-        <Routes> 
+        <TaskList />
+       
+        {/* <Routes> 
           <Route path="/" element={<TaskList/>} />
           <Route path="/details/:id" element={<TaskDetail/>} /> 
-        </Routes>
+        </Routes> */}
+       
       </div>
+      
     </>
   )
 }

@@ -1,9 +1,8 @@
 import React from "react";
-import TaskList from "./TaskList";
 import { useParams, Link } from "react-router";
 
 const TaskDetail = ({ tasks }) => {
-    const id = useParams();
+    const {id} = useParams();
 
     const task = tasks.find((task) => String(task.id) === id);
 
