@@ -1,10 +1,30 @@
 import React from "react";
 import { useParams, Link } from "react-router";
 
-const TaskDetail = ({ tasks }) => {
+ const taskData = [
+    {
+      id: 1,
+      title: "Complete lesson",
+      description: "React Lesson",
+    },
+    {
+      id: 2,
+      title: "Complete group practice",
+      description:
+        "React State Management and Event Handling - 4 - Task Management",
+    },
+    {
+      id: 3,
+      title: "Start on project",
+      description: "Unit 1 Final Project - React App",
+    },
+  ];
+
+
+const TaskDetail = () => {
     const {id} = useParams();
 
-    const task = tasks.find((task) => String(task.id) === id);
+    const task = taskData.find((task) => String(task.id) === id);
 
     return (
         <div>
@@ -15,7 +35,7 @@ const TaskDetail = ({ tasks }) => {
                 </div>
                 <div>
                     <strong>Description: </strong>
-                    {task.description}
+                    <p>{task.description}</p>
                 </div>
             </div>
         </div>

@@ -8,12 +8,12 @@ function App() {
   return (
     <>
       <div>
-        <TaskList />
+        {/* <TaskList /> */}
        
-        {/* <Routes> 
+        <Routes> 
           <Route path="/" element={<TaskList/>} />
-          <Route path="/details/:id" element={<TaskDetail/>} /> 
-        </Routes> */}
+          <Route path="/tasks/:id" element={<TaskDetail/>} /> 
+        </Routes>
        
       </div>
       

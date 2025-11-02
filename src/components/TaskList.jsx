@@ -6,7 +6,7 @@ const TaskList = () => {
     {
       id: 1,
       title: "Complete lesson",
-      description: "React Lesson",
+      description: "React Module",
     },
     {
       id: 2,
@@ -28,9 +28,8 @@ const TaskList = () => {
         {taskData.map((task) => (
           
             <li key={task.id}>
-              <Link to={`/details/${task.id}`}>{task.title}</Link>
+              <Link to={`/tasks/${task.id}`}>{task.title}</Link>
             </li>
-        
         ))}
       </ul>
    
